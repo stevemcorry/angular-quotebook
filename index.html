@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html ng-app='myApp'>
+  <head>
+    <link rel="stylesheet" href="style.css"></link>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body ng-controller='mainCtrl'>
+    <div ng-repeat='quote in quotes' ng-model='allQuotes'>
+      "{{quote.text}}" - {{quote.author}}
+      <button type="button" ng-click='removeData($index)'>X</button>
+  </div>
+  <input type="text" ng-model='newQuote.text'>
+  <input type="text" ng-model='newQuote.author'>
+  <button type="button" ng-click='addData(newQuote)'>Add Quote</button>
+
+
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.3/angular.js"></script>
+         <script src="app.js"></script>
+         <script src="ctrl.js"></script>
+         <script src="srvc.js"></script>
+  </body>
+</html>
